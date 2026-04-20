@@ -1,0 +1,272 @@
+[
+  {
+    "id": 1,
+    "title": "Grammar Basics",
+    "description": "Test your understanding of basic English grammar",
+    "difficulty": "Beginner",
+    "timeLimit": 300,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Which of the following is a correct sentence?",
+        "type": "multiple-choice",
+        "options": [
+          "She go to school every day.",
+          "She goes to school every day.",
+          "She going to school every day.",
+          "She gone to school every day."
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "id": 2,
+        "question": "Fill in the blank: \"I _____ been waiting for an hour.\"",
+        "type": "fill-blank",
+        "options": [
+          "have",
+          "has",
+          "had",
+          "having"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "id": 3,
+        "question": "Choose the correct past tense of 'run':",
+        "type": "multiple-choice",
+        "options": [
+          "runned",
+          "ran",
+          "runed",
+          "running"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Vocabulary Mastery",
+    "description": "Expand your English vocabulary with advanced words",
+    "difficulty": "Intermediate",
+    "timeLimit": 450,
+    "questions": [
+      {
+        "id": 1,
+        "question": "What does 'ubiquitous' mean?",
+        "type": "multiple-choice",
+        "options": [
+          "Rare and unusual",
+          "Present everywhere",
+          "Very expensive",
+          "Difficult to understand"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "id": 2,
+        "question": "Choose the synonym for 'meticulous':",
+        "type": "multiple-choice",
+        "options": [
+          "Careless",
+          "Quick",
+          "Careful",
+          "Lazy"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "id": 3,
+        "question": "What is the meaning of 'ephemeral'?",
+        "type": "multiple-choice",
+        "options": [
+          "Lasting forever",
+          "Very large",
+          "Short-lived",
+          "Extremely bright"
+        ],
+        "correctAnswer": 2
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Advanced Grammar",
+    "description": "Challenge yourself with complex grammar patterns",
+    "difficulty": "Advanced",
+    "timeLimit": 600,
+    "questions": [
+      {
+        "id": 1,
+        "question": "If I _____ you, I would study harder.",
+        "type": "multiple-choice",
+        "options": [
+          "am",
+          "was",
+          "were",
+          "will be"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "id": 2,
+        "question": "The book _____ by millions of people.",
+        "type": "multiple-choice",
+        "options": [
+          "has read",
+          "has been read",
+          "have read",
+          "have been read"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "id": 3,
+        "question": "Choose the correct sentence:",
+        "type": "multiple-choice",
+        "options": [
+          "Neither of the students are here.",
+          "Neither of the students is here.",
+          "Neither of the student are here.",
+          "Neither of the student is here."
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Business English",
+    "description": "Professional communication skills for workplace success",
+    "difficulty": "Intermediate",
+    "timeLimit": 360,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Which is the most formal way to start a business email?",
+        "type": "multiple-choice",
+        "options": [
+          "Hey there!",
+          "Hi!",
+          "Dear Sir/Madam,",
+          "What's up?"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "id": 2,
+        "question": "What does 'to touch base' mean in business context?",
+        "type": "multiple-choice",
+        "options": [
+          "To make physical contact",
+          "To check in or communicate",
+          "To play baseball",
+          "To touch something"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "id": 3,
+        "question": "Choose the best closing for a formal business letter:",
+        "type": "multiple-choice",
+        "options": [
+          "See ya!",
+          "Sincerely,",
+          "Bye!",
+          "Cheers!"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Tenses and Time",
+    "description": "Master English tenses and time expressions",
+    "difficulty": "Beginner",
+    "timeLimit": 300,
+    "questions": [
+      {
+        "id": 1,
+        "question": "I _____ to the store yesterday.",
+        "type": "multiple-choice",
+        "options": [
+          "go",
+          "went",
+          "going",
+          "will go"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "id": 2,
+        "question": "She _____ here for three years.",
+        "type": "multiple-choice",
+        "options": [
+          "lives",
+          "lived",
+          "has lived",
+          "will live"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "id": 3,
+        "question": "Tomorrow, I _____ my friend.",
+        "type": "multiple-choice",
+        "options": [
+          "visit",
+          "visited",
+          "visiting",
+          "will visit"
+        ],
+        "correctAnswer": 3
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Pronunciation Challenge",
+    "description": "Test your knowledge of English pronunciation rules",
+    "difficulty": "Advanced",
+    "timeLimit": 240,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Which word has a different vowel sound?",
+        "type": "multiple-choice",
+        "options": [
+          "cat",
+          "bat",
+          "cut",
+          "hat"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "id": 2,
+        "question": "How many syllables are in 'comfortable'?",
+        "type": "multiple-choice",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "id": 3,
+        "question": "Which word is stressed on the second syllable?",
+        "type": "multiple-choice",
+        "options": [
+          "PHOtograph",
+          "phoTOgraphy",
+          "photoGRAPHic",
+          "All of the above"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  }
+]

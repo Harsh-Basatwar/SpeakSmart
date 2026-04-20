@@ -1,0 +1,169 @@
+[
+  {
+    "id": "1760341476361",
+    "name": "Prajwal Kate",
+    "email": "kateprajwal0807@gmail.com",
+    "password": "$2a$12$2MhhcDIUL4jCcr3Rv2G7gOMvnFZ0yYtBI9Gt/LXOQdqBNi.my6Zpm",
+    "role": "student",
+    "createdAt": "2025-10-13T07:44:36.361Z",
+    "progress": {
+      "totalProgress": 0,
+      "completedModules": 0,
+      "quizScores": [],
+      "flashcardsLearned": 0,
+      "streakDays": 0
+    }
+  },
+  {
+    "id": "1760342886306",
+    "name": "Prajwal Kate",
+    "email": "20240110015@mitaoe.ac.in",
+    "password": "$2a$12$0zZ6RVnZYi4sRSsto71hOuVbyz6VyaEDyG2LKMTefFhrdBClml4O2",
+    "role": "teacher",
+    "createdAt": "2025-10-13T08:08:06.306Z",
+    "progress": {
+      "totalProgress": 0,
+      "completedModules": 0,
+      "quizScores": [],
+      "flashcardsLearned": 0,
+      "streakDays": 0
+    }
+  },
+  {
+    "id": "1760384266214",
+    "name": "Harsh basatwar",
+    "email": "harshbasatwar4@gmail.com",
+    "password": "$2a$12$owvB.pOhAl4s0V6ZOJCysuJYiMjT2mIKXqlcgHb2uZ1V16rsSjfB6",
+    "role": "student",
+    "createdAt": "2025-10-13T19:37:46.214Z",
+    "progress": {
+      "totalProgress": 0,
+      "completedModules": 0,
+      "quizScores": [],
+      "flashcardsLearned": 0,
+      "streakDays": 0
+    }
+  },
+  {
+    "id": "1762879222239",
+    "name": "Harsh Basatwar",
+    "email": "202301100069@mitaoe.ac.in",
+    "password": "$2a$12$cVIoyeqyiC8TeIrVGRXCUexUHCiQ.FWabQTzrvPfjmL4oje25joD6",
+    "role": "student",
+    "createdAt": "2025-11-11T16:40:22.239Z",
+    "progress": {
+      "totalProgress": 20,
+      "completedModules": 0,
+      "quizScores": [
+        {
+          "quizId": 1,
+          "quizTitle": "Grammar Basics",
+          "score": 50,
+          "correctAnswers": 1,
+          "totalQuestions": 2,
+          "timeSpent": 5,
+          "completedAt": "2025-11-11T19:56:16.560Z"
+        },
+        {
+          "quizId": 1,
+          "quizTitle": "Grammar Basics",
+          "score": 50,
+          "correctAnswers": 1,
+          "totalQuestions": 2,
+          "timeSpent": 10,
+          "completedAt": "2025-11-11T19:56:32.966Z"
+        },
+        {
+          "quizId": 1,
+          "quizTitle": "Grammar Basics",
+          "score": 100,
+          "correctAnswers": 2,
+          "totalQuestions": 2,
+          "timeSpent": 4,
+          "completedAt": "2025-11-11T19:56:39.072Z"
+        },
+        {
+          "quizId": 3,
+          "quizTitle": "Advanced Grammar",
+          "score": 33,
+          "correctAnswers": 1,
+          "totalQuestions": 3,
+          "timeSpent": 21,
+          "completedAt": "2025-11-12T03:50:50.172Z"
+        },
+        {
+          "quizId": 3,
+          "quizTitle": "Advanced Grammar",
+          "score": 67,
+          "correctAnswers": 2,
+          "totalQuestions": 3,
+          "timeSpent": 15,
+          "completedAt": "2025-11-12T07:48:21.966Z"
+        }
+      ],
+      "flashcardsLearned": 0,
+      "streakDays": 0
+    },
+    "lastActive": "2025-11-12T07:48:21.966Z"
+  },
+  {
+    "id": "1762884609501",
+    "name": "Prajwal kate",
+    "email": "202301100151@mitaoe.ac.in",
+    "password": "$2a$12$Zf8c70NCcKQM4sPVfde5/OqXWN8xtpus9fAB940zDHWYfHon50ZZC",
+    "role": "student",
+    "createdAt": "2025-11-11T18:10:09.501Z",
+    "progress": {
+      "totalProgress": 0,
+      "completedModules": 0,
+      "quizScores": [],
+      "flashcardsLearned": 0,
+      "streakDays": 0
+    }
+  },
+  {
+    "id": "1762885398449",
+    "name": "Test User",
+    "email": "test@example.com",
+    "password": "$2a$12$zN/Tlxgee8YToIuQyIvI8u8HxQD4LdmcLgqAoNNzLHlm2.0NFX6bq",
+    "role": "student",
+    "createdAt": "2025-11-11T18:23:18.449Z",
+    "progress": {
+      "totalProgress": 0,
+      "completedModules": 0,
+      "quizScores": [],
+      "flashcardsLearned": 0,
+      "streakDays": 0
+    }
+  },
+  {
+    "id": "1762888572096",
+    "name": "Harsh Basatwar",
+    "email": "202301100079@mitaoe.ac.in",
+    "password": "$2a$12$s/eqmggfG8bzhVtNZkIm6eD7B5UYnLNyejZ7ZPyiVJ9Tb3hDSoVO6",
+    "role": "student",
+    "createdAt": "2025-11-11T19:16:12.096Z",
+    "progress": {
+      "totalProgress": 0,
+      "completedModules": 0,
+      "quizScores": [],
+      "flashcardsLearned": 0,
+      "streakDays": 0
+    }
+  },
+  {
+    "id": "1776671634966",
+    "name": "Harsh basatwar",
+    "email": "harshbasatwar@gmail.com",
+    "password": "$2a$12$cSzkTShHtu1v3uiM.l9XIu.vg9/rrDRKMfe8tNXGc9cvUPNcT0hOm",
+    "role": "teacher",
+    "createdAt": "2026-04-20T07:53:54.966Z",
+    "progress": {
+      "totalProgress": 0,
+      "completedModules": 0,
+      "quizScores": [],
+      "flashcardsLearned": 0,
+      "streakDays": 0
+    }
+  }
+]
