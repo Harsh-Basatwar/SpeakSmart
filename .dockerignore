@@ -1,10 +1,29 @@
-node_modules
-client/node_modules
-server/node_modules
-client/build
-**/npm-debug.log
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Build output
+client/build/
+
+# Environment variables
 .env
-server/.env
 client/.env
-.git
+server/.env
+
+# Logs
+npm-debug.log*
+*.log
+
+# Git
+.git/
 .gitignore
+
+# Dev/test files
+test-db.js
+test-signup.js
+server/test-db.js
+server/test-signup.js
+
+# Docs
+*.md
