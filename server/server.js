@@ -22,7 +22,7 @@ const PORT = process.env.PORT || 5000;
 // Security middleware
 app.use(helmet());
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:3000',
+  origin: process.env.CLIENT_URL || `http://localhost:3000`,
   credentials: true
 }));
 
@@ -72,8 +72,15 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`📚 English Learning Platform API`);
-  console.log(`🌐 Environment: ${process.env.NODE_ENV || 'development'}`);
+const server = app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+  console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+});
+
+// ECS sends SIGTERM on task stop — close server gracefully
+process.on('SIGTERM', () => {
+  server.close(() => {
+    console.log('Server closed gracefully');
+    process.exit(0);
+  });
 });

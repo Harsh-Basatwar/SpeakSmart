@@ -5,6 +5,7 @@ const { authenticateToken } = require('../middleware/auth');
 const { User } = require('../models');
 
 const router = express.Router();
+const JWT_SECRET = process.env.JWT_SECRET;
 
 // Register
 router.post('/signup', async (req, res) => {
@@ -37,7 +38,7 @@ router.post('/signup', async (req, res) => {
 
     const token = jwt.sign(
       { userId: newUser.id, email: newUser.email, role: newUser.role },
-      process.env.JWT_SECRET || 'your-secret-key',
+      JWT_SECRET,
       { expiresIn: '7d' }
     );
 
@@ -80,7 +81,7 @@ router.post('/login', async (req, res) => {
 
     const token = jwt.sign(
       { userId: user.id, email: user.email, role: user.role },
-      process.env.JWT_SECRET || 'your-secret-key',
+      JWT_SECRET,
       { expiresIn: '7d' }
     );
 

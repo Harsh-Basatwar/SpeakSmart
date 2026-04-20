@@ -26,3 +26,7 @@ Thumbs.db
 # Lock files (optional - remove if you want to commit them)
 # package-lock.json
 
+# AWS secrets reference (contains key names - keep private)
+SSM_PARAMETER_STORE_GUIDE.md
+AWS_DEPLOYMENT_CHECKLIST.md
+

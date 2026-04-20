@@ -35,13 +35,16 @@ pool.getConnection((err, connection) => {
   }
 });
 
-// Graceful shutdown
-process.on('SIGINT', () => {
+// Graceful shutdown - ECS sends SIGTERM, not SIGINT
+const shutdown = () => {
   pool.end((err) => {
     if (err) console.error('Error closing MySQL pool:', err);
     else console.log('MySQL pool closed');
     process.exit(0);
   });
-});
+};
+
+process.on('SIGTERM', shutdown);
+process.on('SIGINT', shutdown);
 
 module.exports = { pool, promisePool };
