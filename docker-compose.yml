@@ -1,14 +1,12 @@
 services:
   app:
-    image: ${ECR_IMAGE:-speaksmart:latest}
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ${ECR_IMAGE}
     ports:
       - "5000:5000"
     environment:
       - NODE_ENV=production
       - PORT=5000
+      - CLIENT_URL=${CLIENT_URL}
       - DB_HOST=${DB_HOST}
       - DB_PORT=3306
       - DB_NAME=english_learning_platform
