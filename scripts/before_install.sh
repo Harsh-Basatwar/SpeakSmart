@@ -1,17 +1,19 @@
 #!/bin/bash
 set -e
 
-# Install Docker if not installed
+echo "Starting BeforeInstall..."
+
+# Use dnf instead of yum (Amazon Linux 2023)
 if ! command -v docker &> /dev/null; then
   echo "Installing Docker..."
-  yum update -y
-  yum install -y docker
+  dnf update -y
+  dnf install -y docker
   systemctl enable docker
   systemctl start docker
   usermod -aG docker ec2-user
 fi
 
-# Install Docker Compose if not installed
+# Install Docker Compose
 if ! command -v docker-compose &> /dev/null; then
   echo "Installing Docker Compose..."
   curl -SL "https://github.com/docker/compose/releases/latest/download/docker-compose-linux-x86_64" \
@@ -19,10 +21,10 @@ if ! command -v docker-compose &> /dev/null; then
   chmod +x /usr/local/bin/docker-compose
 fi
 
-# Install AWS CLI if not installed (needed to pull SSM params and ECR login)
+# Install AWS CLI
 if ! command -v aws &> /dev/null; then
   echo "Installing AWS CLI..."
-  yum install -y awscli
+  dnf install -y awscli
 fi
 
 echo "BeforeInstall complete"
