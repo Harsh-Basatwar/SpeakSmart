@@ -5,7 +5,7 @@ const { authenticateToken } = require('../middleware/auth');
 const { User } = require('../models');
 
 const router = express.Router();
-const JWT_SECRET = process.env.JWT_SECRET;
+const JWT_SECRET = process.env.JWT_SECRET || null;
 
 // Register
 router.post('/signup', async (req, res) => {
@@ -35,6 +35,10 @@ router.post('/signup', async (req, res) => {
       password: hashedPassword,
       role: role || 'student'
     });
+
+    if (!JWT_SECRET) {
+      return res.status(503).json({ message: 'Auth not configured' });
+    }
 
     const token = jwt.sign(
       { userId: newUser.id, email: newUser.email, role: newUser.role },
@@ -78,6 +82,10 @@ router.post('/login', async (req, res) => {
     }
 
     await User.updateLastActive(user.id);
+
+    if (!JWT_SECRET) {
+      return res.status(503).json({ message: 'Auth not configured' });
+    }
 
     const token = jwt.sign(
       { userId: user.id, email: user.email, role: user.role },

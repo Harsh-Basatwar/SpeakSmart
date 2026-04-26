@@ -1,9 +1,15 @@
 const jwt = require('jsonwebtoken');
 
 const JWT_SECRET = process.env.JWT_SECRET;
-if (!JWT_SECRET) throw new Error('JWT_SECRET environment variable is not set');
+if (!JWT_SECRET) {
+  console.warn('JWT_SECRET not set, auth disabled');
+}
 
 const authenticateToken = (req, res, next) => {
+  if (!JWT_SECRET) {
+    return res.status(503).json({ message: 'Auth not configured' });
+  }
+
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];
 
