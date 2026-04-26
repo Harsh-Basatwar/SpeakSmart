@@ -15,8 +15,6 @@ phases:
       - export IMAGE_URI=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME
       - export COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - export IMAGE_TAG=${COMMIT_HASH:-latest}
-      - echo "IMAGE_URI=$IMAGE_URI" >> $CODEBUILD_ENV_FILE
-      - echo "IMAGE_TAG=$IMAGE_TAG" >> $CODEBUILD_ENV_FILE
 
   build:
     commands:
@@ -28,7 +26,7 @@ phases:
       - echo Pushing image to ECR...
       - docker push $IMAGE_URI:$IMAGE_TAG
       - docker push $IMAGE_URI:latest
-      - echo Writing IMAGE_URI into docker-compose for deployment...
+      - echo Updating docker-compose with new image...
       - sed -i "s|image: .*|image: $IMAGE_URI:$IMAGE_TAG|" docker-compose.yml
 
 artifacts:
