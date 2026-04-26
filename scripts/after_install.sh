@@ -2,7 +2,7 @@
 set -e
 
 APP_DIR=/home/ec2-user/speaksmart
-REGION=ap-sout-1
+REGION=ap-south-1
 
 echo "Fetching secrets from SSM Parameter Store..."
 
