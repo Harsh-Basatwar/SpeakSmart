@@ -7,6 +7,10 @@ env:
     REACT_APP_API_URL: /speaksmart/REACT_APP_API_URL
 
 phases:
+  install:
+    runtime-versions:
+      docker: 20
+  
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
@@ -14,8 +18,6 @@ phases:
       - export IMAGE_URI=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME
       - export COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - export IMAGE_TAG=${COMMIT_HASH:-latest}
-      - echo "IMAGE_URI=$IMAGE_URI" >> $CODEBUILD_ENV_FILE
-      - echo "IMAGE_TAG=$IMAGE_TAG" >> $CODEBUILD_ENV_FILE
 
   build:
     commands:
