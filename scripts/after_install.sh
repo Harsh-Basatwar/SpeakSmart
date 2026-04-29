@@ -2,9 +2,12 @@
 set -e
 
 APP_DIR=/home/ec2-user/speaksmart
-REGION=ap-south-1
+REGION=$(curl -s http://169.254.169.254/latest/meta-data/placement/region)
 
 echo "Fetching secrets from SSM Parameter Store..."
+
+# Clear .env before writing to avoid duplicate keys on redeployment
+> $APP_DIR/.env
 
 # Pull all secrets from SSM and write to .env file
 aws ssm get-parameters \
@@ -31,19 +34,15 @@ DB_PORT=3306
 DB_NAME=english_learning_platform
 EOF
 
-# Get ECR image URI from docker-compose.yml (already baked in by buildspec)
-ECR_IMAGE=$(grep 'image:' $APP_DIR/docker-compose.yml | awk '{print $2}')
-echo "ECR_IMAGE=$ECR_IMAGE" >> $APP_DIR/.env
-
-# Login to ECR and pull the image
+# Login to ECR and pull the image (image URI is already baked into docker-compose.yml by buildspec)
 ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
 aws ecr get-login-password --region $REGION | \
   docker login --username AWS --password-stdin $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com
 
+ECR_IMAGE=$(grep 'image:' $APP_DIR/docker-compose.yml | awk '{print $2}')
 echo "Pulling Docker image: $ECR_IMAGE"
 docker pull $ECR_IMAGE
 
-# Set correct ownership
 chown -R ec2-user:ec2-user $APP_DIR
 
 echo "AfterInstall complete"
