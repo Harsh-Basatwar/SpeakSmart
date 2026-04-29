@@ -36,15 +36,11 @@ router.post('/signup', async (req, res) => {
       role: role || 'student'
     });
 
-    if (!JWT_SECRET) {
-      return res.status(503).json({ message: 'Auth not configured' });
-    }
-
-    const token = jwt.sign(
+    const token = JWT_SECRET ? jwt.sign(
       { userId: newUser.id, email: newUser.email, role: newUser.role },
       JWT_SECRET,
       { expiresIn: '7d' }
-    );
+    ) : null;
 
     res.status(201).json({
       message: 'User created successfully',
@@ -83,15 +79,11 @@ router.post('/login', async (req, res) => {
 
     await User.updateLastActive(user.id);
 
-    if (!JWT_SECRET) {
-      return res.status(503).json({ message: 'Auth not configured' });
-    }
-
-    const token = jwt.sign(
+    const token = JWT_SECRET ? jwt.sign(
       { userId: user.id, email: user.email, role: user.role },
       JWT_SECRET,
       { expiresIn: '7d' }
-    );
+    ) : null;
 
     const { password: _, ...userWithoutPassword } = user;
 

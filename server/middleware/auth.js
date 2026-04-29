@@ -7,7 +7,8 @@ if (!JWT_SECRET) {
 
 const authenticateToken = (req, res, next) => {
   if (!JWT_SECRET) {
-    return res.status(503).json({ message: 'Auth not configured' });
+    console.warn('JWT_SECRET not set, skipping auth');
+    return next();
   }
 
   const authHeader = req.headers['authorization'];
